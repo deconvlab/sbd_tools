@@ -12,9 +12,9 @@ function initpkg(addrm)
 
 % Directories + subdirectories to add to path
 dirs = {
-    '.',        false;
-    'solvers',  true;
-    'utils',    true;
+  '.',          false;
+  'solvers',    true;
+  'utils',      true;
 };
 
 warning('OFF', 'MATLAB:addpath:DirNotFound');
@@ -36,13 +36,13 @@ warning('ON', 'MATLAB:rmpath:DirNotFound');
 end
 
 function pathop(path, addrm, recursive)
-    if recursive
-        path = genpath(path);
-    end
-    
-    if addrm
-        addpath(path);
-    else
-        rmpath(path);
-    end
+  if recursive
+    path = genpath(path);
+  end
+
+  if addrm
+    addpath(path);
+  else
+    rmpath(path);
+  end
 end
